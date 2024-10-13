@@ -8,7 +8,7 @@ const filters = document.querySelectorAll('.filters button');
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-// Render tasks based on the current filter
+
 const renderTasks = (filter = 'all') => {
     taskList.innerHTML = '';
     const filteredTasks = tasks.filter(task => {
@@ -38,7 +38,7 @@ const renderTasks = (filter = 'all') => {
     });
 };
 
-// Toggle the visibility of task details
+
 const toggleDescription = (button) => {
     const description = button.previousElementSibling.querySelector('.description');
     description.style.display = description.style.display === 'none' ? 'block' : 'none';
@@ -91,4 +91,4 @@ const filterTasks = (event) => {
 taskForm.addEventListener('submit', addTask);
 filters.forEach(filter => filter.addEventListener('click', filterTasks));
 
-renderTasks();  // Initial rendering of tasks
+renderTasks();  
