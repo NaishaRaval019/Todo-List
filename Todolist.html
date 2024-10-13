@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Todo List</title>
+    <link rel="stylesheet" href="CSSFILE.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Enter your task" required>
+            <textarea id="task-description" placeholder="Add a detailed description"></textarea>
+            <input type="date" id="due-date">
+            <select id="priority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit">Add Task</button>
+        </form>
+        <div class="filters">
+            <button id="all">All</button>
+            <button id="active">Active</button>
+            <button id="completed">Completed</button>
+            <button id="overdue">Overdue</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="Javascriptfile.js"></script>
+</body>
+</html>
